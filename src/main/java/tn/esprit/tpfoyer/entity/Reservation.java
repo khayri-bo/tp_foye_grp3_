@@ -7,7 +7,6 @@ import lombok.experimental.FieldDefaults;
 import java.util.Date;
 import java.util.Set;
 
-
 @Entity
 @Getter
 @Setter
@@ -20,29 +19,12 @@ public class Reservation {
     @Id
     String idReservation;
 
-
     Date anneeUniversitaire;
     boolean estValide;
-
-
-
-
-
-
-
-
-
-
 
     @ManyToMany
     Set<Etudiant> etudiants;
 
-
-
-
-    /*@ToString.Exclude
-    @JsonIgnore*/
-
+    // You can add a field for the total price if needed
+    // double totalPrice;
 }
-
-
