@@ -18,6 +18,7 @@
     </properties>
 
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -50,7 +51,13 @@
             <version>2.1.0</version>
         </dependency>
     </dependencies>
-
+    <distributionManagement>
+        <repository>
+            <id>deploymentRepo</id>
+            <name>NexusRepository</name>
+            <url>http://192.168.119.128:8081/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
     <build>
         <plugins>
             <!-- Spring Boot Maven Plugin -->
@@ -76,7 +83,7 @@
                     <execution>
                         <goals>
                             <goal>prepare-agent</goal>
-                            
+
                         </goals>
                     </execution>
                     <execution>
